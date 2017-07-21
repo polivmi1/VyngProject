@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        android:id="@+id/toolbar" >
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/middle"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchInput"
+        android:layout_below="@+id/toolbar"
+        android:maxLength="30"
+        android:layout_margin="8dp"
+        android:hint="@string/input_text"
+        android:layout_toLeftOf="@+id/middle"
+        android:layout_toStartOf="@+id/middle"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchButton"
+        android:layout_below="@+id/toolbar"
+        android:layout_toRightOf="@+id/searchInput"
+        android:layout_toEndOf="@+id/searchInput"
+        android:layout_margin="8dp"
+        android:text="@string/search"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchButton" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VyngProject</string>
+    <string name="search">Search</string>
+    <string name="input_text">Enter keyword</string>
+    <string name="video_saved">Video has been saved. You can rate it now.</string>
+    <string name="load_failed">Couldn\'t fetch data - check internet</string>
+</resources>
